@@ -1,3 +1,10 @@
+# IDE Files #
+.idea/
+.DS_Store
+*.iml
+*.ipr
+*.iws
+
 *.class
 
 # Package Files #
