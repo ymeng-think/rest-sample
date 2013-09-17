@@ -19,12 +19,13 @@ public class MovieResource {
     private MovieService service;
 
     @RequestMapping(value = "/{id}", method = GET)
-    public @ResponseBody String getName(@PathVariable int id) {
+    @ResponseBody
+    public String getName(@PathVariable int id) {
         Movie movie = service.getMovie(id);
         if (movie == null) {
             throw new ResourceNotFoundException();
         }
-        
+
         return movie.getName();
     }
 }
